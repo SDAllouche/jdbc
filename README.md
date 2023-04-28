@@ -3,5 +3,6 @@ In this project we will create a catalog management application (product, catego
 * The Service layer: which handles the various treatments.
 * The Presentation layer: which is responsible for entering it, checking and displaying the results using the MVC paterne designation. 
 
-![image](https://user-images.githubusercontent.com/102489525/235124070-7efba2ee-af50-46d8-a35e-a89d77812a87.png)
+![Picture1](https://user-images.githubusercontent.com/102489525/235124679-9ef25dfe-d56f-4909-a94b-1bd4199f5d71.jpg)
+
 
