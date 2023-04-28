@@ -5,4 +5,7 @@ In this project we will create a catalog management application (product, catego
 
 ![Picture1](https://user-images.githubusercontent.com/102489525/235124679-9ef25dfe-d56f-4909-a94b-1bd4199f5d71.jpg)
 
+## License
+[MIT LICENSE](License)
+
 
