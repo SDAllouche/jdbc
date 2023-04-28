@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.tpjdbc.presentation.controllers.produitsController">
+   <top>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane hgap="5.0" vgap="15.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="328.39996337890625" minWidth="10.0" prefWidth="177.60003662109375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.0" minWidth="10.0" prefWidth="475.9999633789063" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nom :" />
+                  <Label text="Description :" GridPane.rowIndex="1" />
+                  <Label text="Prix :" GridPane.rowIndex="2" />
+                  <Label text="Quantite :" GridPane.rowIndex="3" />
+                  <TextField fx:id="textNom" GridPane.columnIndex="1" />
+                  <TextField fx:id="textDescription" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="textPrix" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="textQuantite" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </GridPane>
+            <GridPane prefHeight="98.0" prefWidth="668.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="146.79998779296875" minWidth="10.0" prefWidth="80.39995574951172" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="169.20001983642578" minWidth="10.0" prefWidth="128.000048828125" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="164.7999755859375" minWidth="10.0" prefWidth="124.19998779296873" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="164.7999755859375" minWidth="10.0" prefWidth="124.19998779296873" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="266.3999877929688" minWidth="10.0" prefWidth="264.8000122070313" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets right="20.0" top="30.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addProduit" text="Ajouter" />
+                  <Button mnemonicParsing="false" onAction="#updateProduit" text="Modifier" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#deleteProduit" text="Supprimer" GridPane.columnIndex="2" />
+                  <TextField fx:id="textSearch" prefHeight="26.0" prefWidth="223.0" GridPane.columnIndex="4" />
+                  <Button onAction="#clearProduit" mnemonicParsing="false" text="Clear Fields" GridPane.columnIndex="3" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </top>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" />
+   </padding>
+   <center>
+      <TableView fx:id="tableView" prefHeight="334.0" prefWidth="796.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="113.59997403621674" text="Id" />
+          <TableColumn fx:id="colNom" prefWidth="181.5999755859375" text="Nom" />
+            <TableColumn fx:id="colPrix" prefWidth="167.20001220703125" text="Prix" />
+            <TableColumn fx:id="colQuantite" prefWidth="170.80001831054688" text="Quantite" />
+        </columns>
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>
